@@ -2,7 +2,7 @@
 # Install Requirements
 
 - Some additional requirements might be required
-- 
+
 `pip install -r requirements.txt`
 
 `pip install tensorflow`
