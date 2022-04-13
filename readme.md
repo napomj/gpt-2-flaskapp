@@ -1,6 +1,8 @@
 
 # Install Requirements
+
 - Some additional requirements might be required
+- 
 `pip install -r requirements.txt`
 
 `pip install tensorflow`
@@ -9,6 +11,7 @@
 # Fine tuning model.
 
 - Inside of the gpt-2/src you can use the `encode.py` to train a text file.
+- 
 __note: you first need to download one of the models__
 
 `python encode.py <file_name>.txt training.npz`
