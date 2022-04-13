@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="{{ url_for('generator.analyze') }}">
+                <div>
+                    <label>Title</label>
+                    <input type="text" placeholder="Enter prompt" name="title"/>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <p>
+                {{ text }}
+            </p>
+        </div>
+    </body>
+</html>
