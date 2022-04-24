@@ -11,7 +11,7 @@ from flaskapp import sample
 from flaskapp import encoder
 
 class AI:
-    def generate_text(self, text_input, model_name="124M_alice", length=100):
+    def generate_text(self, text_input, model_name="124M_bees", length=400):
         seed=None
         nsamples=1
         batch_size=1
@@ -62,6 +62,8 @@ class AI:
                     generated += 1
                     text = enc.decode(out[i])
                     self.response = text
-        return self.response
+        res = self.response.split('.')
+        resStr = ".".join(res[:-1])
+        return text_input + resStr + "."
 
 ai = AI()

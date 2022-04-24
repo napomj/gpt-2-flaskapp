@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <style>
-
-        </style>
-    </head>
-    <body>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .page-content {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        @media screen (min-width: 600px) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+      .header-title {
+        padding: 1rem;
+ text-align: center;
+ letter-spacing: .4rem;
+ color: rgba(70, 70, 70, 0.8);
+      }
+      .input-prompt {
+        font: inherit;
+        color: currentColor;
+        width: 100%;
+        border: 0;
+        height: 1.1876em;
+        margin: 0;
+        display: block;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        animation-name: mui-auto-fill-cancel;
+        letter-spacing: inherit;
+        animation-duration: 10ms;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .output-box {
+        height: 100%;
+        width: 100%;
+        border: black;
+        background-color: #204354;
+        padding: 1.5rem;
+        border-radius: 3px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-content">
+        <h1 class="header-title">Text Generator Tool</h1>
+      <form method="POST" action="{{ url_for('generator.textgen') }}">
         <div>
-            <form method="POST" action="{{ url_for('generator.analyze') }}">
-                <div>
-                    <label>Title</label>
-                    <input type="text" placeholder="Enter prompt" name="title"/>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-            <p>
-                {{ text }}
-            </p>
+          <input
+            type="text"
+            placeholder="Enter text prompt"
+            name="title"
+            class="input-prompt"
+          />
         </div>
-    </body>
+        <button type="submit">Generate</button>
+      </form>
+      <div class="output-box">{{ text }}</div>
+    </div>
+  </body>
 </html>

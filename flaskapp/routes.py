@@ -10,8 +10,8 @@ def index():
     # parameter = request.form['parameter']
     return render_template('index.html')
 
-@generator.route('/analyze', methods=['POST'])
-def analyze():
+@generator.route('/textgen', methods=['POST'])
+def textgen():
     title = request.form['title']
     text = ai.generate_text(title)
 
