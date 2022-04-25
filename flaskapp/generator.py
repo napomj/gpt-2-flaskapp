@@ -66,8 +66,8 @@ class AI:
                     generated += 1
                     text = enc.decode(out[i])
                     self.response = text
-        res = self.response.split('.')
-        resStr = ".".join(res[:-1])
-        return text_input + resStr + "."
+        # res = self.response.split('.')
+        # resStr = ".".join(res[:-1])
+        return text_input + self.response + "."
 
 ai = AI()
