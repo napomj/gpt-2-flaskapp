@@ -11,15 +11,19 @@ from flaskapp import sample
 from flaskapp import encoder
 
 class AI:
-    def generate_text(self, text_input, model_name="124M_bees", length=400):
+    def generate_text(self, text_input, model_name="124M", length=100, temperature=1):
         seed=None
         nsamples=1
         batch_size=1
-        temperature=1
         top_k=40
         top_p=1
-
+        
         self.response = ""
+
+        if (model_name == "bees" or model_name == "alice"):
+            model_name = "124M_" + model_name
+        else:
+            model_name = "124M"
 
         currentPath = os.path.dirname(__file__) + "/models" + "/" + model_name
 
