@@ -22,6 +22,8 @@ python3 download_model.py 774M
 python3 download_model.py 1558M
 ```
 
+- This is the command used for encoding the file to training.npz. This is the file used for training.
+
 `python encode.py <file_name>.txt training.npz`
 
 - This trains the model. While training you may enter `ctrl + C` and it will automatically save the content inside of a folder called checkpoint. Then you will want to copy that folders contents into the model (or copy of) you trained from. Use this to generate your text.
