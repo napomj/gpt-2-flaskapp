@@ -14,7 +14,13 @@
 
 - Inside of the gpt-2/src you can use the `encode.py` to train a text file.
 
-__note: you first need to download one of the models__
+__note: you first need to download one of the models by using the follow commands__
+``` terminal
+python3 download_model.py 124M
+python3 download_model.py 355M
+python3 download_model.py 774M
+python3 download_model.py 1558M
+```
 
 `python encode.py <file_name>.txt training.npz`
 
